@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Javascript-OOP - Delicius</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="Javascript 객체 지향 프로그래밍서로 연관된 변수와 함수를 그룹핑하고 이름을 붙인 것 배열과 객체를 만들고, 값을 읽는 법index.js12345678910111213141516const memberArray = [&quot;AAA&quot;, &quot;BBB&quot;, &quot;CCC&quot;];console.log(&quot;memberArray[2]&quot;, memberArray[2]);//객체const">
+<meta name="keywords" content="Front-end,Javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript-OOP">
+<meta property="og:url" content="https://iheno.github.io/designblog/2019/12/13/javascript_oop/index.html">
+<meta property="og:site_name" content="Delicius">
+<meta property="og:description" content="Javascript 객체 지향 프로그래밍서로 연관된 변수와 함수를 그룹핑하고 이름을 붙인 것 배열과 객체를 만들고, 값을 읽는 법index.js12345678910111213141516const memberArray = [&quot;AAA&quot;, &quot;BBB&quot;, &quot;CCC&quot;];console.log(&quot;memberArray[2]&quot;, memberArray[2]);//객체const">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://iheno.github.io/designblog/designblog/img/jsoop.png">
+<meta property="og:updated_time" content="2019-12-13T11:58:35.613Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript-OOP">
+<meta name="twitter:description" content="Javascript 객체 지향 프로그래밍서로 연관된 변수와 함수를 그룹핑하고 이름을 붙인 것 배열과 객체를 만들고, 값을 읽는 법index.js12345678910111213141516const memberArray = [&quot;AAA&quot;, &quot;BBB&quot;, &quot;CCC&quot;];console.log(&quot;memberArray[2]&quot;, memberArray[2]);//객체const">
+<meta name="twitter:image" content="https://iheno.github.io/designblog/designblog/img/jsoop.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/designblog/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/designblog/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/designblog/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/designblog/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/designblog/">
+            
+                <img src="/designblog/images/logo.svg" alt="Javascript-OOP" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/designblog/">Home</a>
+                
+                <a class="navbar-item" href="/designblog/archives">Archives</a>
+                
+                <a class="navbar-item" href="/designblog/tags">Tags</a>
+                
+                <a class="navbar-item" href="/designblog/categories">Categories</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/iheno/">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/designblog/img/jsoop.png" alt="Javascript-OOP">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-13T11:54:26.000Z">2019-12-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 minutes read (About 1488 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Javascript-OOP
+            
+        </h1>
+        <div class="content">
+            <h1 id="Javascript-객체-지향-프로그래밍"><a href="#Javascript-객체-지향-프로그래밍" class="headerlink" title="Javascript 객체 지향 프로그래밍"></a>Javascript 객체 지향 프로그래밍</h1><p><code>서로 연관된 변수와 함수를 그룹핑하고 이름을 붙인 것</code></p>
+<h2 id="배열과-객체를-만들고-값을-읽는-법"><a href="#배열과-객체를-만들고-값을-읽는-법" class="headerlink" title="배열과 객체를 만들고, 값을 읽는 법"></a>배열과 객체를 만들고, 값을 읽는 법</h2><figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> memberArray = [<span class="hljs-string">"AAA"</span>, <span class="hljs-string">"BBB"</span>, <span class="hljs-string">"CCC"</span>];</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"memberArray[2]"</span>, memberArray[<span class="hljs-number">2</span>]);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//객체</span></span><br><span class="line"><span class="hljs-keyword">const</span> memberObject = &#123;</span><br><span class="line">  manager: <span class="hljs-string">"AAA"</span>,</span><br><span class="line">  developer: <span class="hljs-string">"BBB"</span>,</span><br><span class="line">  designer: <span class="hljs-string">"CCC"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">memberObject.designer = <span class="hljs-string">"CCCC"</span>; <span class="hljs-comment">//객체 이름 수정</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"memberObject.designer"</span>, memberObject.designer);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"memberObject['designer']"</span>, memberObject[<span class="hljs-string">"designer"</span>]);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">delete</span> memberObject.manager;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"delete memberObject.manager"</span>, memberObject.manager);</span><br></pre></td></tr></table></figure>
+
+<p>-&gt; result</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CCC</span><br><span class="line">memberObject.designer</span><br><span class="line">CCCC</span><br><span class="line">memberObject[&apos;designer&apos;]</span><br><span class="line">CCCC</span><br><span class="line">delete memberObject.manager</span><br><span class="line"></span><br><span class="line">- undefined</span><br></pre></td></tr></table></figure>
+
+<h2 id="반복문을-이용해서-객체의-모든-값에-적근하는-방법"><a href="#반복문을-이용해서-객체의-모든-값에-적근하는-방법" class="headerlink" title="반복문을 이용해서 객체의 모든 값에 적근하는 방법"></a>반복문을 이용해서 객체의 모든 값에 적근하는 방법</h2><figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> memberArray = [<span class="hljs-string">"AAA"</span>, <span class="hljs-string">"BBB"</span>, <span class="hljs-string">"CCC"</span>];</span><br><span class="line"><span class="hljs-built_in">console</span>.group(<span class="hljs-string">"array loop"</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">while</span> (i &lt; memberArray.length) &#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(i, memberArray[i]);</span><br><span class="line">  i = i + <span class="hljs-number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.groupEnd(<span class="hljs-string">"array loop"</span>);</span><br><span class="line"><span class="hljs-keyword">const</span> memberObject = &#123;</span><br><span class="line">  manager: <span class="hljs-string">"AAA"</span>,</span><br><span class="line">  developer: <span class="hljs-string">"BBB"</span>,</span><br><span class="line">  designer: <span class="hljs-string">"CCC"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="hljs-built_in">console</span>.group(<span class="hljs-string">"object loop"</span>);</span><br><span class="line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> name <span class="hljs-keyword">in</span> memberObject) &#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(name, memberObject[name]);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="hljs-built_in">console</span>.groupEnd(<span class="hljs-string">"object loop"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>-&gt; result</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">0</span><br><span class="line">&quot;AAA&quot;</span><br><span class="line">1</span><br><span class="line">&quot;BBB&quot;</span><br><span class="line">2</span><br><span class="line">&quot;CCC&quot;</span><br><span class="line">manager</span><br><span class="line">AAA</span><br><span class="line">developer</span><br><span class="line">BBB</span><br><span class="line">designer</span><br><span class="line">CCC</span><br></pre></td></tr></table></figure>
+
+<h2 id="객체를-실제로-활용하는-사례"><a href="#객체를-실제로-활용하는-사례" class="headerlink" title="#객체를 실제로 활용하는 사례"></a>#객체를 실제로 활용하는 사례</h2><p><strong><em>수학적 객체</em></strong></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.PI);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.random());</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.floor(<span class="hljs-number">3.9</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="객체를-만들어서-연관된-변수와-함수를-정리-정돈"><a href="#객체를-만들어서-연관된-변수와-함수를-정리-정돈" class="headerlink" title="객체를 만들어서 연관된 변수와 함수를 정리 정돈"></a>객체를 만들어서 연관된 변수와 함수를 정리 정돈</h2><figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Math.PI"</span>, <span class="hljs-built_in">Math</span>.PI);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Math,random()"</span>, <span class="hljs-built_in">Math</span>.random()); <span class="hljs-comment">//method</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Math.floor(3.9)"</span>, <span class="hljs-built_in">Math</span>.floor(<span class="hljs-number">3.9</span>));</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> MyMath = &#123;</span><br><span class="line">  PI: <span class="hljs-built_in">Math</span>.PI,</span><br><span class="line">  random: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.random();</span><br><span class="line">  &#125;,</span><br><span class="line">  floor: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.floor(val);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"MyMath.PI"</span>, MyMath.PI);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"MyMath.random()"</span>, MyMath.random());</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"MyMath.floor(3.9)"</span>, MyMath.floor(<span class="hljs-number">3.9</span>));</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> MyMath_PI = <span class="hljs-built_in">Math</span>.PI;</span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyMath_random</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.random();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyMath_floor</span>(<span class="hljs-params">val</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.floor(val);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(MyMath_PI);</span><br></pre></td></tr></table></figure>
+
+<h1 id="’This’"><a href="#’This’" class="headerlink" title="’This’"></a>’This’</h1><p><code>메소드 내에서 메소드가 속한 객체를 참조 할 때 사용하는 키워드인 this에 대해서 알아보기</code><br><br><strong><em>자기 자신을 가리키는 대명사 ’this’</em></strong></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> Kim = &#123;</span><br><span class="line">  name: <span class="hljs-string">"kim"</span>,</span><br><span class="line">  first: <span class="hljs-number">10</span>,</span><br><span class="line">  second: <span class="hljs-number">20</span>,</span><br><span class="line">  sum: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(Kim.sum());</span><br></pre></td></tr></table></figure>
+
+<p>-&gt; result</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30</span><br></pre></td></tr></table></figure>
+
+<h2 id="객체를-수동으로-만드는-가내수공업에서-벗어나서-객체를-자동으로-찍어내는-공장인-constructor을-만들어보자"><a href="#객체를-수동으로-만드는-가내수공업에서-벗어나서-객체를-자동으로-찍어내는-공장인-constructor을-만들어보자" class="headerlink" title="객체를 수동으로 만드는 가내수공업에서 벗어나서 객체를 자동으로 찍어내는 공장인 constructor을 만들어보자"></a>객체를 수동으로 만드는 가내수공업에서 벗어나서 객체를 자동으로 찍어내는 공장인 constructor을 만들어보자</h2><p><strong><em>가내수공업으로 객체를 만들 때의 단점</em></strong></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> kim = &#123;</span><br><span class="line">  name: <span class="hljs-string">"kim"</span>,</span><br><span class="line">  first: <span class="hljs-number">10</span>,</span><br><span class="line">  second: <span class="hljs-number">20</span>,</span><br><span class="line">  third: <span class="hljs-number">30</span>,</span><br><span class="line">  sum: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second + <span class="hljs-keyword">this</span>.third;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> lee = &#123;</span><br><span class="line">  name: <span class="hljs-string">"lee"</span>,</span><br><span class="line">  first: <span class="hljs-number">10</span>,</span><br><span class="line">  second: <span class="hljs-number">10</span>,</span><br><span class="line">  third: <span class="hljs-number">10</span>,</span><br><span class="line">  sum: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second + <span class="hljs-keyword">this</span>.third;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(kim.sum());</span><br><span class="line"><span class="hljs-built_in">console</span>.log(lee.sum());</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>내장된 객체를 통해서 객체 공장의 쓰임을 체험</em></strong></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> kim = &#123;</span><br><span class="line">  name: <span class="hljs-string">"kim"</span>,</span><br><span class="line">  first: <span class="hljs-number">10</span>,</span><br><span class="line">  second: <span class="hljs-number">20</span>,</span><br><span class="line">  third: <span class="hljs-number">30</span>,</span><br><span class="line">  sum: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second + <span class="hljs-keyword">this</span>.third;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> lee = &#123;</span><br><span class="line">  name: <span class="hljs-string">"lee"</span>,</span><br><span class="line">  first: <span class="hljs-number">10</span>,</span><br><span class="line">  second: <span class="hljs-number">10</span>,</span><br><span class="line">  third: <span class="hljs-number">10</span>,</span><br><span class="line">  sum: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second + <span class="hljs-keyword">this</span>.third;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(kim.sum());</span><br><span class="line"><span class="hljs-built_in">console</span>.log(lee.sum());</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> d1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">"2019-12-25"</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(d1.getFullYear());</span><br><span class="line"><span class="hljs-built_in">console</span>.log(d1.getMonth() + <span class="hljs-number">1</span>); <span class="hljs-comment">// 0 ,1, 2, 3...</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><em>Constructor function 만들기(construct function : 생성자함수)</em></strong></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params">name, first, second, third</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">  <span class="hljs-keyword">this</span>.first = first;</span><br><span class="line">  <span class="hljs-keyword">this</span>.second = second;</span><br><span class="line">  <span class="hljs-keyword">this</span>.third = third;</span><br><span class="line">  <span class="hljs-keyword">this</span>.sum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second + <span class="hljs-keyword">this</span>.third;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> kim = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"kim"</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>);</span><br><span class="line"><span class="hljs-keyword">const</span> lee = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"lee"</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(kim.sum());</span><br><span class="line"><span class="hljs-built_in">console</span>.log(lee.sum());</span><br></pre></td></tr></table></figure>
+
+<p>-&gt; result</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">60</span><br><span class="line">30</span><br></pre></td></tr></table></figure>
+
+<h2 id="Prototype"><a href="#Prototype" class="headerlink" title="Prototype"></a>Prototype</h2><p><code>JavaScript의 prototype이 필요한 이유와 prototype을 통해서 코드의 재사용성과 성능을 향상시키는 방법</code><br><br><br><strong><em>prototype을 이용해서 코드의 재사용성을 높이고, 성능을 향상시키는 방법</em></strong></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params">name, first, second</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">  <span class="hljs-keyword">this</span>.first = first;</span><br><span class="line">  <span class="hljs-keyword">this</span>.second = second;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.sum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">`prototype : `</span> + (<span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="hljs-comment">//성능과 메모리 절약뿐 아니라 유지보수가 싶다</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> kim = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"kim"</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>);</span><br><span class="line">  kim.sum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">`this : `</span> + (<span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="hljs-comment">//재정의도 가능하다</span></span><br><span class="line"><span class="hljs-keyword">const</span> lee = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"lee"</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(kim.sum());</span><br><span class="line"><span class="hljs-built_in">console</span>.log(lee.sum());</span><br></pre></td></tr></table></figure>
+
+<h2 id="class"><a href="#class" class="headerlink" title="class"></a>class</h2><p><code>클래스에서 생성자 함수를 구현하는 방법</code><br><br></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(name, first, second) &#123;</span><br><span class="line">  <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">  <span class="hljs-keyword">this</span>.first = first;</span><br><span class="line">  <span class="hljs-keyword">this</span>.second = second;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> kim = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"kim"</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(kim);</span><br></pre></td></tr></table></figure>
+
+<h2 id="class에서-객체의-method-구현하기"><a href="#class에서-객체의-method-구현하기" class="headerlink" title="class에서 객체의 method 구현하기"></a>class에서 객체의 method 구현하기</h2><figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(name, first, second) &#123;</span><br><span class="line">  <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">  <span class="hljs-keyword">this</span>.first = first;</span><br><span class="line">  <span class="hljs-keyword">this</span>.second = second;</span><br><span class="line">&#125;</span><br><span class="line">  sum() &#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">`prototype : `</span> + (<span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> kim = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"kim"</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>);</span><br><span class="line">  kim.sum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">`this : `</span> + (<span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="hljs-keyword">const</span> lee = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"lee"</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(kim.sum());</span><br><span class="line"><span class="hljs-built_in">console</span>.log(lee.sum());</span><br></pre></td></tr></table></figure>
+
+<h2 id="class-상속"><a href="#class-상속" class="headerlink" title="class 상속"></a>class 상속</h2><p><code>클래스를 상속해서 서브 클래스를 만드는 방법</code><br></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(name, first, second) &#123;</span><br><span class="line">  <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">  <span class="hljs-keyword">this</span>.first = first;</span><br><span class="line">  <span class="hljs-keyword">this</span>.second = second;</span><br><span class="line">  &#125;</span><br><span class="line">  sum() &#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersonPlus</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">  avg() &#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> (<span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second) / <span class="hljs-number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> kim = <span class="hljs-keyword">new</span> PersonPlus(<span class="hljs-string">"kim"</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(kim.sum());</span><br><span class="line"><span class="hljs-built_in">console</span>.log(kim.avg());</span><br></pre></td></tr></table></figure>
+
+<h2 id="super"><a href="#super" class="headerlink" title="super"></a>super</h2><p><code>부모 클래스에게 일을 시키고 부모가 하지 못하는 일은 나만 하도록 하는 키워드가 super 다.</code><br><br><br><strong><em>super( ) 에서 ( ) 안에는 부모 클래스에서의 생성자를 넣는다.</em></strong></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(name, first, second) &#123;</span><br><span class="line">  <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">  <span class="hljs-keyword">this</span>.first = first;</span><br><span class="line">  <span class="hljs-keyword">this</span>.second = second;</span><br><span class="line">  &#125;</span><br><span class="line">  sum() &#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersonPlus</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(name, first, second, third) &#123;</span><br><span class="line">  <span class="hljs-keyword">super</span>(name, first, second);</span><br><span class="line">  <span class="hljs-keyword">this</span>.third = third;</span><br><span class="line">  &#125;</span><br><span class="line">    sum() &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.sum() + <span class="hljs-keyword">this</span>.third;</span><br><span class="line">  &#125;</span><br><span class="line">    avg() &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second + <span class="hljs-keyword">this</span>.third) / <span class="hljs-number">3</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> kim = <span class="hljs-keyword">new</span> PersonPlus(<span class="hljs-string">"kim"</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(kim.sum()); <span class="hljs-comment">// 60</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(kim.avg()); <span class="hljs-comment">// 20</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="객체간의-상속"><a href="#객체간의-상속" class="headerlink" title="객체간의 상속"></a>객체간의 상속</h2><p><code>1.proptotype(__proto__)을 이용해서 상속을 구현</code></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> superObj = &#123; <span class="hljs-attr">superVal</span>: <span class="hljs-string">"super"</span> &#125;;</span><br><span class="line"><span class="hljs-keyword">const</span> subObj = &#123; <span class="hljs-attr">subVal</span>: <span class="hljs-string">"sub"</span> &#125;;</span><br><span class="line">subObj.__proto__ = superObj; <span class="hljs-comment">//subObj 가 superObj의 자식이다.</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(subObj.subVal);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(subObj.superVal);</span><br><span class="line"></span><br><span class="line">subObj.superVal = <span class="hljs-string">"sub"</span>;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(superObj.superVal);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// sub super super</span></span><br></pre></td></tr></table></figure>
+
+<p><code>2.Object.create를 이용해서 __proto__를 대체하는 방법</code></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> superObj = &#123; <span class="hljs-attr">superVal</span>: <span class="hljs-string">"super"</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> subObj = <span class="hljs-built_in">Object</span>.create(superObj);</span><br><span class="line">subObj.subVal = <span class="hljs-string">"sub"</span>;</span><br><span class="line"><span class="hljs-keyword">debugger</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(subObj.subVal); <span class="hljs-comment">//sub</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(subObj.superVal); <span class="hljs-comment">//super</span></span><br><span class="line">subObj.superVal = <span class="hljs-string">"sub"</span>;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(superObj.superVal); <span class="hljs-comment">//super</span></span><br></pre></td></tr></table></figure>
+
+<p><code>예제)</code></p>
+<figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> superObj = &#123; <span class="hljs-attr">superVal</span>: <span class="hljs-string">"super"</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> subObj = <span class="hljs-built_in">Object</span>.create(superObj);</span><br><span class="line">subObj.subVal = <span class="hljs-string">"sub"</span>;</span><br><span class="line"><span class="hljs-keyword">debugger</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(subObj.subVal); <span class="hljs-comment">//sub</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(subObj.superVal); <span class="hljs-comment">//super</span></span><br><span class="line">subObj.superVal = <span class="hljs-string">"sub"</span>;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(superObj.superVal); <span class="hljs-comment">//super</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> kim = &#123;</span><br><span class="line">  name: <span class="hljs-string">"kim"</span>,</span><br><span class="line">  first: <span class="hljs-number">10</span>,</span><br><span class="line">  second: <span class="hljs-number">20</span>,</span><br><span class="line">  sum: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// const lee = &#123;</span></span><br><span class="line"><span class="hljs-comment">// name: "lee",</span></span><br><span class="line"><span class="hljs-comment">// first: 10,</span></span><br><span class="line"><span class="hljs-comment">// second: 10,</span></span><br><span class="line"><span class="hljs-comment">// avg: function() &#123;</span></span><br><span class="line"><span class="hljs-comment">// return (this.first + this.second) / 2;</span></span><br><span class="line"><span class="hljs-comment">// &#125;</span></span><br><span class="line"><span class="hljs-comment">// &#125;;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// lee.__proto__ = kim;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> lee = <span class="hljs-built_in">Object</span>.create(kim);</span><br><span class="line">  lee.name = <span class="hljs-string">"lee"</span>;</span><br><span class="line">  lee.first = <span class="hljs-number">10</span>;</span><br><span class="line">  lee.second = <span class="hljs-number">10</span>;</span><br><span class="line">  lee.avg = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> (<span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second) / <span class="hljs-number">2</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(lee.sum());</span><br><span class="line"><span class="hljs-built_in">console</span>.log(lee.avg());</span><br></pre></td></tr></table></figure>
+
+<h2 id="객체와-함수"><a href="#객체와-함수" class="headerlink" title="객체와 함수"></a>객체와 함수</h2><p><code>자바스크립트는에서 함수는 혼자 있으면 개인이고, new가 앞에 있으면 객체를 만드는 신이고, call을 뒤에 붙이면 용병이고, bind를 붙이면 분신술을 부리는 놀라운 존재입니다.</code><br></p>
+<h3 id="1-call을-통해서-실행할-때마다-this의-값을-변경하는-방법"><a href="#1-call을-통해서-실행할-때마다-this의-값을-변경하는-방법" class="headerlink" title="1. call을 통해서 실행할 때마다 this의 값을 변경하는 방법"></a>1. call을 통해서 실행할 때마다 this의 값을 변경하는 방법</h3><figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> kim = &#123; <span class="hljs-attr">name</span>: <span class="hljs-string">"kim"</span>, <span class="hljs-attr">first</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">second</span>: <span class="hljs-number">20</span> &#125;;</span><br><span class="line"><span class="hljs-keyword">const</span> lee = &#123; <span class="hljs-attr">name</span>: <span class="hljs-string">"lee"</span>, <span class="hljs-attr">first</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">second</span>: <span class="hljs-number">10</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">prefix</span>) </span>&#123;</span><br><span class="line"><span class="hljs-keyword">return</span> prefix + (<span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// sum();</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(sum.call(kim, <span class="hljs-string">"=&gt;"</span>)); <span class="hljs-comment">// =&gt;30</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(sum.call(lee, <span class="hljs-string">":"</span>)); <span class="hljs-comment">// :20</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-bind를-통해서-독립적이면서도-특정-객체의-메소드-역할을-할-수-있는-함수-만들기"><a href="#2-bind를-통해서-독립적이면서도-특정-객체의-메소드-역할을-할-수-있는-함수-만들기" class="headerlink" title="2. bind를 통해서 독립적이면서도 특정 객체의 메소드 역할을 할 수 있는 함수 만들기"></a>2. bind를 통해서 독립적이면서도 특정 객체의 메소드 역할을 할 수 있는 함수 만들기</h3><figure class="highlight js hljs"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> kim = &#123; <span class="hljs-attr">name</span>: <span class="hljs-string">"kim"</span>, <span class="hljs-attr">first</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">second</span>: <span class="hljs-number">20</span> &#125;;</span><br><span class="line"><span class="hljs-keyword">const</span> lee = &#123; <span class="hljs-attr">name</span>: <span class="hljs-string">"lee"</span>, <span class="hljs-attr">first</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">second</span>: <span class="hljs-number">10</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">item</span>) </span>&#123;</span><br><span class="line"><span class="hljs-keyword">return</span> item + (<span class="hljs-keyword">this</span>.first + <span class="hljs-keyword">this</span>.second);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// sum();</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(sum.call(kim, <span class="hljs-string">"=&gt;"</span>));</span><br><span class="line"><span class="hljs-built_in">console</span>.log(sum.call(lee, <span class="hljs-string">":"</span>));</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> kimSum = sum.bind(kim, <span class="hljs-string">"-&gt;"</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(kimSum()); <span class="hljs-comment">// -&gt;30</span></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/designblog/tags/Front-end/">Front-end</a>, <a class="has-link-grey -link" href="/designblog/tags/Javascript/">Javascript</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/designblog/2019/11/29/javascript_basic/">
+                <span class="level-item">Javascript 기초잡기</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/designblog/images/avatar.png" alt="Rodel.Heno">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Rodel.Heno
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        UI/UX Creator
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Tokyo</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        3
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/iheno/" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iheno/">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/henoj">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Codepen" href="https://codepen.io/iheno/">
+                
+                <i class="fab fa-codepen"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/j-heno-297b5b13a/">
+                
+                <i class="fab fa-linkedin"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/iheno/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">iheno</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/designblog/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/designblog/tags/Front-end/" style="font-size: 20px;">Front-end</a> <a href="/designblog/tags/Javascript/" style="font-size: 15px;">Javascript</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/designblog/2019/12/13/javascript_oop/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/designblog/img/jsoop.png" alt="Javascript-OOP">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-13T11:54:26.000Z">2019-12-13</time></div>
+                    <a href="/designblog/2019/12/13/javascript_oop/" class="has-link-black-ter is-size-6">Javascript-OOP</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/designblog/2019/11/29/javascript_basic/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/designblog/img/jsbasic.jpg" alt="Javascript 기초잡기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-29T11:50:35.000Z">2019-11-29</time></div>
+                    <a href="/designblog/2019/11/29/javascript_basic/" class="has-link-black-ter is-size-6">Javascript 기초잡기</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/designblog/2019/11/25/mordern_js01/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/designblog/img/modernjs.png" alt="모던 자바스크립트">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-25T09:06:42.000Z">2019-11-25</time></div>
+                    <a href="/designblog/2019/11/25/mordern_js01/" class="has-link-black-ter is-size-6">모던 자바스크립트</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/designblog/2019/11/25/ES6/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/designblog/img/es6.png" alt="ES6 문법 훑어보기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-25T02:05:31.000Z">2019-11-25</time></div>
+                    <a href="/designblog/2019/11/25/ES6/" class="has-link-black-ter is-size-6">ES6 문법 훑어보기</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/designblog/2019/06/18/SCSS/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/designblog/img/sass.png" alt="SCSS의 기본적인 사용 방법">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T05:10:17.000Z">2019-06-18</time></div>
+                    <a href="/designblog/2019/06/18/SCSS/" class="has-link-black-ter is-size-6">SCSS의 기본적인 사용 방법</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/designblog/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/designblog/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">November 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/designblog/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/designblog/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/designblog/tags/Front-end/">
+                        <span class="tag">Front-end</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/designblog/tags/Javascript/">
+                        <span class="tag">Javascript</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/designblog/2019/12/13/javascript_oop/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/designblog/img/jsoop.png" alt="Javascript-OOP">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-13T11:54:26.000Z">2019-12-13</time></div>
+                    <a href="/designblog/2019/12/13/javascript_oop/" class="has-link-black-ter is-size-6">Javascript-OOP</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/designblog/2019/11/29/javascript_basic/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/designblog/img/jsbasic.jpg" alt="Javascript 기초잡기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-29T11:50:35.000Z">2019-11-29</time></div>
+                    <a href="/designblog/2019/11/29/javascript_basic/" class="has-link-black-ter is-size-6">Javascript 기초잡기</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/designblog/2019/11/25/mordern_js01/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/designblog/img/modernjs.png" alt="모던 자바스크립트">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-25T09:06:42.000Z">2019-11-25</time></div>
+                    <a href="/designblog/2019/11/25/mordern_js01/" class="has-link-black-ter is-size-6">모던 자바스크립트</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/designblog/2019/11/25/ES6/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/designblog/img/es6.png" alt="ES6 문법 훑어보기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-25T02:05:31.000Z">2019-11-25</time></div>
+                    <a href="/designblog/2019/11/25/ES6/" class="has-link-black-ter is-size-6">ES6 문법 훑어보기</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/designblog/2019/06/18/SCSS/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/designblog/img/sass.png" alt="SCSS의 기본적인 사용 방법">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T05:10:17.000Z">2019-06-18</time></div>
+                    <a href="/designblog/2019/06/18/SCSS/" class="has-link-black-ter is-size-6">SCSS의 기본적인 사용 방법</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/designblog/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/designblog/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">November 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/designblog/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/designblog/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/designblog/tags/Front-end/">
+                        <span class="tag">Front-end</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/designblog/tags/Javascript/">
+                        <span class="tag">Javascript</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/designblog/">
+                
+                    <img src="/designblog/images/logo.svg" alt="Javascript-OOP" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/iheno/">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/designblog/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/designblog/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/designblog/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/designblog/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/designblog/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/designblog/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/designblog/js/insight.js" defer></script>
+<link rel="stylesheet" href="/designblog/css/search.css">
+<link rel="stylesheet" href="/designblog/css/insight.css">
+    
+</body>
+</html>
